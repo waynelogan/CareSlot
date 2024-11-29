@@ -50,5 +50,8 @@ COPY --from=admin_build /app/admin/dist/ ./public/admin/
 # Expose port
 EXPOSE 4000
 
+RUN --env-file .env <your_image>
+
+
 # Start the backend server
 CMD ["node", "server.js"]
