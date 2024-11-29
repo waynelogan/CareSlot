@@ -10,6 +10,8 @@ import chatbotRouter from "./routes/chatbotRoute.js";
 import path from "path";
 import { fileURLToPath } from "url";
 
+
+
 // __dirname replacement for ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,7 +24,7 @@ connectCloudinary();
 
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: '*' }));
 
 app._router.stack.forEach((middleware) => {
   if (middleware.route) {
