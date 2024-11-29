@@ -12,7 +12,8 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const backendUrl = VITE_BACKEND_URL;
+  // const backendUrl = VITE_BACKEND_URL;
+  const backendUrl = "http://localhost:4000";
   console.log('Backend URL:', backendUrl);
 
   const { setDToken } = useContext(DoctorContext)
